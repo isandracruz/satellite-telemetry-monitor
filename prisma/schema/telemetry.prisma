@@ -1,0 +1,11 @@
+model Telemetry {
+  id                String   @id @default(uuid())
+  satelliteId       String
+  temperature       Float
+  batteryLevel      Float
+  solarPanelVoltage Float
+  orientation       String
+  createdAt         DateTime @default(now())
+
+  alerts            Alert[]
+}

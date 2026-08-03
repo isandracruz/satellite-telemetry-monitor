@@ -1,0 +1,14 @@
+enum Priority {
+  INFO
+  WARNING
+  CRITICAL
+}
+
+model Alert {
+  id          String    @id @default(uuid())
+  telemetryId String
+  telemetry   Telemetry @relation(fields: [telemetryId], references: [id], onDelete: Cascade)
+  message     String
+  priority    Priority  @default(INFO)
+  createdAt   DateTime  @default(now())
+}

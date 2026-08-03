@@ -22,3 +22,9 @@ lerna-debug.log*
 # temp directory
 .temp
 .tmp
+
+# Generated Prisma & AI Agent Skills
+.agents/
+.claude/
+.windsurf/
+skills-lock.json
